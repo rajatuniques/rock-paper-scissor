@@ -50,7 +50,7 @@ function playRound(humanChoice, computerChoice) {
     
     else if(computerChoice==="paper" && humanChoice==="rock") {
         console.log("You lost! Paper beats Rock");
-        computerChoice++;
+        computerScore++;
     }
 
     else if(computerChoice==="scissor" && humanChoice==="paper") {
