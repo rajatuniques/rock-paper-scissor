@@ -19,9 +19,53 @@ function getHumanChoice () {
         if(humanChoice === "rock" ||
            humanChoice === "paper" ||
            humanChoice === "scissor"
-        ) break;
+        ){
+            return humanChoice;
+        } 
+    }
+}
+
+function playRound(humanChoice, computerChoice) {
+    humanChoice = String(humanChoice).toLowerCase();
+    computerChoice = String(computerChoice)
+    
+    if (humanChoice==="rock" && computerChoice==="scissor") {
+        console.log("You won! Rock beats Scissor");
+        humanScore++;
+    }
+    
+    else if(humanChoice==="paper" && computerChoice==="rock") {
+        console.log("You won! Paper beats Rock");
+        humanScore++;
+    }
+
+    else if(humanChoice==="scissor" && computerChoice==="paper") {
+        console.log("You won! Scissor beats Paper");
+        humanScore++;
+    }
+    else if(computerChoice==="rock" && humanChoice==="scissor") {
+        console.log("You won! Rock beats Scissor");
+        computerScore++;
+    }
+    
+    else if(computerChoice==="paper" && humanChoice==="rock") {
+        console.log("You won! Paper beats Rock");
+        computerChoice++;
+    }
+
+    else if(computerChoice==="scissor" && humanChoice==="paper") {
+        console.log("You won! Scissor beats Paper");
+        computerScore++;
+    }
+    else {
+        console.log("It's a draw!")
     }
 }
 
 let humanScore = 0;
 let computerScore = 0;
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
