@@ -1,6 +1,7 @@
 function getComputerChoice () {
-    let compChoice = Math.random() * 100;
-    if(compChoice <= 33 && compChoice >= 0) {
+    let compChoice = Math.floor(Math.random() * 100) + 1;
+    
+    if(compChoice <= 33 && compChoice >= 1) {
         return "rock";
     }
     else if(compChoice >= 67) {
