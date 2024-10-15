@@ -31,41 +31,68 @@ function playRound(humanChoice, computerChoice) {
     
     if (humanChoice==="rock" && computerChoice==="scissor") {
         console.log("You won! Rock beats Scissor");
-        humanScore++;
+        return "human";
     }
     
     else if(humanChoice==="paper" && computerChoice==="rock") {
         console.log("You won! Paper beats Rock");
-        humanScore++;
+        return "human";
     }
 
     else if(humanChoice==="scissor" && computerChoice==="paper") {
         console.log("You won! Scissor beats Paper");
-        humanScore++;
+        return "human";
     }
     else if(computerChoice==="rock" && humanChoice==="scissor") {
         console.log("You lost! Rock beats Scissor");
-        computerScore++;
+        return "computer";
     }
     
     else if(computerChoice==="paper" && humanChoice==="rock") {
         console.log("You lost! Paper beats Rock");
-        computerScore++;
+        return "computer";
     }
 
     else if(computerChoice==="scissor" && humanChoice==="paper") {
         console.log("You lost! Scissor beats Paper");
-        computerScore++;
+        return "computer";
     }
     else {
         console.log("It's a draw!")
     }
 }
 
-let humanScore = 0;
-let computerScore = 0;
+function playGame () {
+    let humanScore = 0;
+    let computerScore = 0;
+    console.log("Rock-paper-scissors\n\n");
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+    for(let i=1;i<=5;i++) {
+        console.log("Round",i,": \n");
+        let humanSelection = getHumanChoice();
+        let computerSelection = getComputerChoice();  
 
-playRound(humanSelection, computerSelection);
+        let winner = playRound(humanSelection, computerSelection);
+        if(winner==="human"){
+            humanScore++;
+        }
+        else if(winner==="computer") {
+            computerScore++;
+        }
+    }
+
+    console.log("\n");
+    if(humanScore > computerScore) {
+        console.log("You are the winner!");
+    }
+    else if(humanScore < computerScore) {
+        console.log("Better luck next time :)");
+    }
+    else {
+        console.log("Entire game ended in a draw.");
+    }
+    
+}
+
+playGame()
+
