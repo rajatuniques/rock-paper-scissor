@@ -44,17 +44,17 @@ function playRound(humanChoice, computerChoice) {
         humanScore++;
     }
     else if(computerChoice==="rock" && humanChoice==="scissor") {
-        console.log("You won! Rock beats Scissor");
+        console.log("You lost! Rock beats Scissor");
         computerScore++;
     }
     
     else if(computerChoice==="paper" && humanChoice==="rock") {
-        console.log("You won! Paper beats Rock");
+        console.log("You lost! Paper beats Rock");
         computerChoice++;
     }
 
     else if(computerChoice==="scissor" && humanChoice==="paper") {
-        console.log("You won! Scissor beats Paper");
+        console.log("You lost! Scissor beats Paper");
         computerScore++;
     }
     else {
