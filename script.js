@@ -32,6 +32,10 @@ let current_human_score = 0;
 let current_computer_score = 0;
 
 function playRound(humanChoice, computerChoice) {
+    // first 'if' block is for detecting if the game is over
+    if(document.querySelector('div.winner')) {
+        return;
+    }
     const result = document.querySelector('div.result');
     humanChoice = String(humanChoice).toLowerCase();
     computerChoice = String(computerChoice)
