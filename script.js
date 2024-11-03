@@ -27,32 +27,48 @@ function getHumanChoice () {
 const human_score = document.querySelector('span.human_score');
 const computer_score = document.querySelector('span.computer_score');
 
+let current_human_score = 0;
+let current_computer_score = 0;
+
 function playRound(humanChoice, computerChoice) {
     const result = document.querySelector('div.result');
     humanChoice = String(humanChoice).toLowerCase();
     computerChoice = String(computerChoice)
     
+    
     if (humanChoice==="rock" && computerChoice==="scissors") {
         result.textContent = "You won! Rock beats Scissors";
+        current_human_score++;
+        human_score.textContent = String(current_human_score);
     }
     
     else if(humanChoice==="paper" && computerChoice==="rock") {
         result.textContent = "You won! Paper beats Rock";
+        current_human_score++;
+        human_score.textContent = String(current_human_score);
     }
 
     else if(humanChoice==="scissors" && computerChoice==="paper") {
         result.textContent = "You won! Scissors beats Paper";
+        current_human_score++;
+        human_score.textContent = String(current_human_score);
     }
     else if(computerChoice==="rock" && humanChoice==="scissors") {
         result.textContent = "You lost! Rock beats Scissors";
+        current_computer_score++;
+        computer_score.textContent = String(current_computer_score);
     }
     
     else if(computerChoice==="paper" && humanChoice==="rock") {
         result.textContent = "You lost! Paper beats Rock";
+        current_computer_score++;
+        computer_score.textContent = String(current_computer_score);
     }
 
     else if(computerChoice==="scissors" && humanChoice==="paper") {
         result.textContent = "You lost! Scissors beats Paper";
+        current_computer_score++;
+        computer_score.textContent = String(current_computer_score);
     }
     else {
         result.textContent = "It's a draw!";
