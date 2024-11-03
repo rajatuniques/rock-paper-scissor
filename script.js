@@ -1,3 +1,5 @@
+const result = document.querySelector('div.result');
+
 function getComputerChoice () {
     let compChoice = Math.floor(Math.random() * 100) + 1;
 
