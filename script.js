@@ -1,3 +1,7 @@
+const rock = document.querySelector('button.rock');
+const paper = document.querySelector('button.paper');
+const scissors = document.querySelector('button.scissors');
+
 function getComputerChoice () {
     let compChoice = Math.floor(Math.random() * 100) + 1;
 
@@ -67,19 +71,19 @@ function playGame () {
     let computerScore = 0;
     console.log("Rock-paper-scissors\n\n");
 
-    for(let i=1;i<=5;i++) {
-        console.log("Round",i,": \n");
-        let humanSelection = getHumanChoice();
-        let computerSelection = getComputerChoice();  
+    
+    console.log("Round",i,": \n");
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice();  
 
-        let winner = playRound(humanSelection, computerSelection);
-        if(winner==="human"){
-            humanScore++;
-        }
-        else if(winner==="computer") {
-            computerScore++;
-        }
+    let winner = playRound(humanSelection, computerSelection);
+    if(winner==="human"){
+        humanScore++;
     }
+    else if(winner==="computer") {
+        computerScore++;
+    }
+    
 
     console.log("\n");
     if(humanScore > computerScore) {
