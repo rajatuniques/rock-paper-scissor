@@ -1,10 +1,10 @@
-# rock-paper-scissor
+# rock-paper-scissors
 
 I created this project to test my basic JavaScript skills.
-I build a devtool console based rock-paper-scissor game.
+I build a devtool console based rock-paper-scissors game.
 
-Rock beats Scissor.
-Scissor beats Paper.
+Rock beats Scissors.
+Scissors beats Paper.
 Paper beats Rocks.
 
 This game will be of five rounds.
