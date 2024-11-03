@@ -79,6 +79,7 @@ function playRound(humanChoice, computerChoice) {
         result.textContent = "It's a draw!";
     }
 
+
     // this section of function will declare final winner
     if(current_human_score === 5) {
         const winner = document.createElement('div');
@@ -92,6 +93,30 @@ function playRound(humanChoice, computerChoice) {
         winner.classList.add("winner")
         winner.textContent = "Better luck next time";
         document.body.appendChild(winner);
+    }
+    
+    if(current_computer_score === 5 || current_human_score === 5) {
+        // restarted button will be created
+        const restart = document.createElement('div');
+        restart.classList.add('restart');
+        restart.textContent = "Game over. Do you want to start another round?";
+        const restart_button = document.createElement('button');
+        restart_button.classList.add('restart_button');
+        restart_button.textContent = "RESTART";
+
+        restart.appendChild(restart_button);
+        body.appendChild(restart);
+        
+        restart_button.addEventListener('click', (e) => {
+            human_score.textContent = "0";
+            computer_score.textContent = "0";
+            current_human_score = 0;
+            current_computer_score = 0;
+            result.textContent = "";
+            const winner = document.querySelector('div.winner');
+            body.removeChild(winner);
+            body.removeChild(restart);
+        })
     }
 }
 
