@@ -24,6 +24,7 @@ function getHumanChoice () {
         } 
     }
 }
+const body = document.querySelector('body');
 const human_score = document.querySelector('span.human_score');
 const computer_score = document.querySelector('span.computer_score');
 
@@ -73,6 +74,21 @@ function playRound(humanChoice, computerChoice) {
     else {
         result.textContent = "It's a draw!";
     }
+
+    // this section of function will declare final winner
+    if(current_human_score === 5) {
+        const winner = document.createElement('div');
+        winner.classList.add("winner")
+        winner.textContent = "You are the winner!";
+        document.body.appendChild(winner);
+    }
+
+    if(current_computer_score === 5) {
+        const winner = document.createElement('div');
+        winner.classList.add("winner")
+        winner.textContent = "Better luck next time";
+        document.body.appendChild(winner);
+    }
 }
 
 function playGame () {
@@ -89,9 +105,8 @@ function playGame () {
     scissors.addEventListener('click', (e) => {
         playRound("scissors", getComputerChoice());
     });
-
     
 }
 
-playGame()
+playGame();
 
