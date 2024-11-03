@@ -5,7 +5,7 @@ function getComputerChoice () {
         return "rock";
     }
     else if(compChoice >= 67) {
-        return "scissor";
+        return "scissors";
     }
     else {
         return "paper";
@@ -18,7 +18,7 @@ function getHumanChoice () {
         humanChoice = prompt("What's your choice : ", 'rock');
         if(humanChoice === "rock" ||
            humanChoice === "paper" ||
-           humanChoice === "scissor"
+           humanChoice === "scissors"
         ){
             return humanChoice;
         } 
@@ -29,8 +29,8 @@ function playRound(humanChoice, computerChoice) {
     humanChoice = String(humanChoice).toLowerCase();
     computerChoice = String(computerChoice)
     
-    if (humanChoice==="rock" && computerChoice==="scissor") {
-        console.log("You won! Rock beats Scissor");
+    if (humanChoice==="rock" && computerChoice==="scissors") {
+        console.log("You won! Rock beats Scissors");
         return "human";
     }
     
@@ -39,12 +39,12 @@ function playRound(humanChoice, computerChoice) {
         return "human";
     }
 
-    else if(humanChoice==="scissor" && computerChoice==="paper") {
-        console.log("You won! Scissor beats Paper");
+    else if(humanChoice==="scissors" && computerChoice==="paper") {
+        console.log("You won! Scissors beats Paper");
         return "human";
     }
-    else if(computerChoice==="rock" && humanChoice==="scissor") {
-        console.log("You lost! Rock beats Scissor");
+    else if(computerChoice==="rock" && humanChoice==="scissors") {
+        console.log("You lost! Rock beats Scissors");
         return "computer";
     }
     
@@ -53,8 +53,8 @@ function playRound(humanChoice, computerChoice) {
         return "computer";
     }
 
-    else if(computerChoice==="scissor" && humanChoice==="paper") {
-        console.log("You lost! Scissor beats Paper");
+    else if(computerChoice==="scissors" && humanChoice==="paper") {
+        console.log("You lost! Scissors beats Paper");
         return "computer";
     }
     else {
