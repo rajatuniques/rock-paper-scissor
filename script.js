@@ -24,6 +24,8 @@ function getHumanChoice () {
         } 
     }
 }
+const human_score = document.querySelector('span.human_score');
+const computer_score = document.querySelector('span.computer_score');
 
 function playRound(humanChoice, computerChoice) {
     const result = document.querySelector('div.result');
