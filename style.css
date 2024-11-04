@@ -23,3 +23,8 @@ button {
     cursor: pointer;
 
 }
+
+.intro {
+    color: #ff6969;
+    -webkit-text-stroke: 0.3px #800000;
+}
