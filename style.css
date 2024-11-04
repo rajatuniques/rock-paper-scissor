@@ -61,6 +61,13 @@ button {
 }
 
 .restart {
+    margin-top: 4px;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.restart_button {
+    align-self: center;
+    padding: 4px 8px;
 }
