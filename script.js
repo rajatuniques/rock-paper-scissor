@@ -36,10 +36,13 @@ function playRound(humanChoice, computerChoice) {
     if(document.querySelector('div.winner')) {
         return;
     }
-    const result = document.querySelector('div.result');
+    
     humanChoice = String(humanChoice).toLowerCase();
     computerChoice = String(computerChoice)
-    
+
+    // creating a div for result
+    const result = document.createElement('div');
+    result.classList.add('result');
     
     if (humanChoice==="rock" && computerChoice==="scissors") {
         result.textContent = "You won! Rock beats Scissors";
@@ -78,7 +81,7 @@ function playRound(humanChoice, computerChoice) {
     else {
         result.textContent = "It's a draw!";
     }
-
+    body.appendChild(result);
 
     // this section of function will declare final winner
     if(current_human_score === 5) {
