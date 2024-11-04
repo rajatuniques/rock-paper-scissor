@@ -47,3 +47,10 @@ button {
     width: 600px;
     margin: 8px;
 }
+
+.human_score,
+.computer_score {
+    border: 1.5px solid #363636;
+    padding: 0.1px 1px;
+    border-radius: 2px;
+}
