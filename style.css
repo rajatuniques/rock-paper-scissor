@@ -32,7 +32,11 @@ button {
 
 .buttons {
     display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
     gap: 60px;
+    row-gap: 10px;
 }
 
 .option {
