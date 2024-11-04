@@ -39,3 +39,10 @@ button {
     flex-flow: column nowrap;
     gap: 4px;
 }
+
+.scores {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin: 8px;
+}
