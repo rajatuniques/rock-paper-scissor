@@ -59,3 +59,8 @@ button {
     color: #3cffca;
     -webkit-text-stroke: 0.2px#315d67;
 }
+
+.restart {
+    display: flex;
+    flex-flow: column nowrap;
+}
