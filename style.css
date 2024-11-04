@@ -28,3 +28,14 @@ button {
     color: #ff6969;
     -webkit-text-stroke: 0.3px #800000;
 }
+
+.buttons {
+    display: flex;
+    gap: 60px;
+}
+
+.option {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 4px;
+}
