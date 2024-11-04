@@ -8,7 +8,7 @@
 
 body {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -43,8 +43,12 @@ button {
 
 .scores {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
-    width: 600px;
+    
+    width: 80vw;
+    flex: 0 0 auto;
+
     margin: 8px;
 }
 
