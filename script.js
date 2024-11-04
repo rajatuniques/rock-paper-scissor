@@ -120,6 +120,8 @@ function playRound(humanChoice, computerChoice) {
             results.forEach((result) => {
                 body.removeChild(result);
             })
+            const winner = document.querySelector('div.winner');
+            body.removeChild(winner);
             body.removeChild(restart);
         })
     }
