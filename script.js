@@ -116,8 +116,10 @@ function playRound(humanChoice, computerChoice) {
             current_human_score = 0;
             current_computer_score = 0;
             result.textContent = "";
-            const winner = document.querySelector('div.winner');
-            body.removeChild(winner);
+            const results = document.querySelectorAll('div.result');
+            results.forEach((result) => {
+                body.removeChild(result);
+            })
             body.removeChild(restart);
         })
     }
